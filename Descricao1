@@ -1,0 +1,49 @@
+ # Conjunto de dados, Jogos da Nintendo, análise objetiva 
+ 
+ ## Breve descrição da base de dados 
+ 
+  Este projeto tem o objetivo de descrever a base de dados, Nintendo Games, para explorar os jogos e as plataformas que se fazem presentes.  
+  
+  As variáveis que iremos utilizar neste projeto são:
+  
+
+* **Meta_Score:** A pontuação dada pelo Metacritic, que é um agregador de críticas de jogos.
+* **User_Score:** A pontuação dada pelos usuários do Metacritic.
+* **Title:** O título do jogo da Nintendo.
+* **Platform:** A plataforma da Nintendo em que o jogo está disponível (por exemplo, Nintendo Switch, Nintendo 3DS, etc.)
+* **Release Date:** A data em que o jogo foi lançado.
+* **Details Page Link:** O link para a página do Metacritic onde mais detalhes sobre o jogo podem ser encontrados.
+* **ESRB_Rating:** A classificação dada pelo Entertainment Software Rating Board (ESRB). Este é um sistema de classificação usado para classificar jogos em categorias apropriadas para diferentes idades.
+* **Developers:** A empresa ou empresas que desenvolveram o jogo.
+* **Genres:** O gênero ou gêneros do jogo (por exemplo, Ação, Aventura, RPG, etc.)
+  
+# Objetivos principais
+
+ O objetivo desse projeto é análisar, descrever e reformar os dados da base para observar os gêneros mais populares em cada plataforma da Nintendo.
+
+
+#Importando bibliotecas para análise
+
+import pandas as pd
+import numpy as np
+
+
+
+import warnings
+warnings.filterwarnings('always')
+warnings.filterwarnings('ignore')
+
+
+nintendogames=pd.read_csv('../input/nintendo-games/NintendoGames.csv')
+
+NintendoGames.describe()
+
+NintendoGames.head()
+
+NintendoGames.tail()
+
+NintendoGames.shape
+
+NintendoGames.dtypes
+
+NintendoGames.isna().sum()
